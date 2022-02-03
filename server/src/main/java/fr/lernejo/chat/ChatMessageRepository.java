@@ -11,7 +11,7 @@ public class ChatMessageRepository {
     private ArrayList<String> messages = new ArrayList<String>();
 
     void addChatMessage(String message) {
-        if (this.messages.size() == 10) {
+        if (this.messages.size() > 10) {
             this.messages.remove(0);
         }
         this.messages.add(message);
